@@ -9,7 +9,7 @@ name: Maxence Kersten
 description: MAX
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars3.githubusercontent.com/u/12412493?s=400&u=9f824611d9e9bc6df74f0a99fedb50090262faa6&v=4
+avatar: https://avatars0.githubusercontent.com/u/7915438?s=400&u=43f1b78d6a7de44ef853e3db90994670c9d5c331&v=4
 
 #
 # Flags below are optional
@@ -18,7 +18,7 @@ avatar: https://avatars3.githubusercontent.com/u/12412493?s=400&u=9f824611d9e9bc
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: maxence.kersten.io
+  email: maxence@kersten.io
   facebook:
   flickr:
   github: MaxKer
@@ -77,6 +77,5 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE
   - README.md
   - CNAME
