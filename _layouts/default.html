@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include head.html %}
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body onload="getSkills(document.getElementById('technical-skills'),'cyber-tech-skill'); getSkills(document.getElementById('management-skills'),'cyber-management-skill');; getSkills(document.getElementById('dev-skills'),'dev-skill'); ">
+
+    {% include header.html %}
+
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in"></div>
+          <div class="intro-heading text-uppercase">Max la menace</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Find more about me</a>
+        </div>
+      </div>
+    </header>
+
+    {% include content/about.html %}
+    {% include content/career.html %}
+    {% include content/skills.html %}
+    {% include content/projects.html %}
+    {% include content/contact.html %}
+  
+    {% include footer.html %}
+    {% include js.html %}
+
+  </body>
+</html>

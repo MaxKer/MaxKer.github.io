@@ -1,0 +1,27 @@
+<script src="{{ site.baseurl }}/js/jquery/jquery.min.js"></script>
+<script src='{{ site.baseurl }}/js/jquery/jquery-ui.min.js'></script>
+<script src="{{ site.baseurl }}/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="{{ site.baseurl }}/js/agency/agency.js"></script>
+<script type="text/javascript">
+
+function afficherMasquer(id)
+{
+  if(document.getElementById(id).style.display == "none")
+    document.getElementById(id).style.display = "block";
+  else
+    document.getElementById(id).style.display = "none";
+}
+
+function getSkills(node, classname) 
+{
+    const childs = document.getElementsByClassName(classname);
+    temp = document.createElement('div');
+
+    $.each(childs, (i, child) => {
+        var clone = childs[i].cloneNode(true);
+        temp.appendChild(clone);
+    });
+
+    node.appendChild(temp);
+}
+</script>
