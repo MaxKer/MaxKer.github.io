@@ -15,13 +15,25 @@ function afficherMasquer(id)
 function getSkills(node, classname) 
 {
     const childs = document.getElementsByClassName(classname);
-    temp = document.createElement('div');
+    var temp = document.createElement('div');
 
     $.each(childs, (i, child) => {
-        var clone = childs[i].cloneNode(true);
-        temp.appendChild(clone);
+        var exit = 0;
+        if(temp.childNodes.length > 0) {
+            $.each(temp.childNodes, (index, e) => {
+                if(e.outerText === childs[i].outerText)
+                {
+                    exit = 1;
+                }
+            });
+        }
+        if(exit == 0) {
+            var clone = childs[i].cloneNode(true);
+            temp.appendChild(clone);
+        }
     });
 
     node.appendChild(temp);
 }
+
 </script>
