@@ -36,4 +36,18 @@ function getSkills(node, classname)
     node.appendChild(temp);
 }
 
+function getTodoList(node) {
+    const childs = document.getElementsByTagName("todo");
+    var temp = document.createElement('div');
+
+    $.each(childs,(i, e) => {
+        // console.log(e.outerText);
+        var clone = childs[i].cloneNode(true);
+        temp.appendChild(clone);
+        temp.appendChild(document.createElement('br'));
+    });
+    console.log(temp);
+    node.appendChild(temp);
+}
+
 </script>
