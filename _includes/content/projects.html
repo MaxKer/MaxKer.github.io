@@ -23,7 +23,7 @@
         </a>
         <br/>
         <div class="portfolio-caption">
-          <h4>Projet WarmDom</h4>
+          <h4>Projet WarmDom <h6 style="color:red">[ En construction ]</h6> </h4>
         </div>
       </div>
 
@@ -58,17 +58,16 @@
                       les connecter sondes réparties dans l'appartement, j'ai décider d'utiliser des Raspberry pi Zero, qui
                       ne coûtent qu'une dizaine d'euros et qui proposent le Wi-Fi.</p>
                     <h4 id="initialisation-de-la-rpi3">Initialisation de la RPi3</h4>
-                    <p>J'ai suivi ce
-                      <todo>liens vers tutoriel</todo>, qui explique comment flasher la dernière version de raspbian (Lite pour ce projet)
+                    <p>J'ai suivi ce <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">tutoriel</a>, qui explique comment flasher la dernière version de raspbian (Lite pour ce projet)
                       sur votre carte SD.</p>
                     <p>Une fois raspbian installé et à jours, j'ai installé Jeedom à partir de ce
-                      <todo>liens vers tutoriel</todo>. La version 3 s'installe comme un paquet Debian classique grâce à un script d'installation.</p>
+                      <a href="https://github.com/jeedom/documentation/blob/master/installation/fr_FR/index.md#raspberrypi" target="_blank">tutoriel</a>. La version 3 s'installe comme un paquet Debian classique grâce à un script d'installation.</p>
                     <h4 id="securit-et-reseau">Sécurité et réseau</h4>
                     <p>Afin de rendre accessible Jeedom de l'extérieur, j'ai choisi d'activer le HTTPS sur le Apache de la RPi,
                       et de configurer LetsEncrypt pour récupérer un certificat TLS Server "trusté" par tous les
                       navigateurs. Cela me permettra par le suite d'accéder à mon interface Jeedom depuis l'extérieur, et
                       donc de piloter mon chauffage même depuis l'extérieur de chez moi.</p>
-                    <p>1) Activer mod_ssl</p>
+                    <h6>1) Activer mod_ssl</h6>
                     <p>
                       <code>a2enmod ssl</code>
                     </p>
@@ -76,17 +75,20 @@
                     <p>
                       <code>sudo service apache2 restart</code>
                     </p>
-                    <p>2) Configurer letsencrypt</p>
-                    <p>3) Modifier le mot de passe admin de Jeedom</p>
+                    <h6>2) Configurer letsencrypt</h6>
+                    <todo>Commandes pour installer et configurer letsencrypt</todo>
+
+                    <h6>3) Modifier le mot de passe admin de Jeedom</h6>
                     <p>Avant de rendre accessible votre Jeedom sur internet, vous devez absolument changer le mot de passe par
                       défaut et mettre un mot de passe robuste.</p>
-                    <p>4) Configurer le NAT sur votre box Internet</p>
+
+                    <h6>4) Configurer le NAT sur votre box Internet</h6>
                     <p>Port interne: 443, port externe 443, machine : votre rpi (onglet NAT/PAT) Je conseille avant d'assigner
                       une IP statique à votre rpi. (onglet DHCP)</p>
                     <h4 id="int-gration-de-slack">Intégration de Slack</h4>
-                    <p>Incoming WebHooks</p>
+                    <h6>1) Incoming WebHooks</h6>
                     <p>-> Permet d'envoyer des messages de Jeedom vers une chan Slack</p>
-                    <p>Outgoing WebHooks</p>
+                    <h6>2) Outgoing WebHooks</h6>
                     <p>-> Permet d'envoyer des commandes à Jeedom depuis Slack</p>
                     <todo>Ajouter les liens vers la configuration des WebHooks Slack</todo>
                     <p>
@@ -96,11 +98,11 @@
                       mais dans un scenario avec ask, il faut bien que la destination soi renseignée</p>
                     <h4 id="int-gration-de-telegram">Intégration de Telegram</h4>
                     <p>
-                      <a href="https://www.maison-et-domotique.com/70896-piloter-jeedom-avec-telegram/">https://www.maison-et-domotique.com/70896-piloter-jeedom-avec-telegram/</a>
+                      <a href="https://www.maison-et-domotique.com/70896-piloter-jeedom-avec-telegram/">Jeedom et Telegram</a>
                     </p>
                     <h3 id="contr-le-des-fils-pilotes">Contrôle des fils pilotes</h3>
-                    <p>
-                      <a href="http://jilks.fr/wordpress/fil-pilote-directement-avec-un-raspberry-et-jeedom">http://jilks.fr/wordpress/fil-pilote-directement-avec-un-raspberry-et-jeedom</a>
+                    <p> 
+                      <a href="http://jilks.fr/wordpress/fil-pilote-directement-avec-un-raspberry-et-jeedom">Jeedom et fils pilotes</a>
                     </p>
                     <h4 id="sch-ma"><todo>Schéma</todo></h4>
 
