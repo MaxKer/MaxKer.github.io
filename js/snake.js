@@ -163,7 +163,7 @@ SNAKE.Snake = SNAKE.Snake || (function() {
 
             var rand = Math.floor((Math.random() * 7) + 1);
             var tempNode = document.createElement("img");
-            tempNode.src = "./img/beurel" + rand + ".jpg";
+            tempNode.src = "./img/body" + rand + ".jpg";
             tempNode.className = "snake-snakebody-block";
             tempNode.style.left = "-1000px";
             tempNode.style.top = "-1000px";
@@ -462,13 +462,17 @@ SNAKE.Food = SNAKE.Food || (function() {
         var fRow, fColumn;
         var myId = instanceNumber++;
 
-        var elmFood = document.createElement("div");
-        elmFood.setAttribute("id", "snake-food-"+myId);
+        var elmFood = document.createElement("img");
+        elmFood.src = "./img/the.jpg";
         elmFood.className = "snake-food-block";
-        elmFood.style.width = playingBoard.getBlockWidth() + "px";
-        elmFood.style.height = playingBoard.getBlockHeight() + "px";
+        elmFood.setAttribute("id", "snake-food-"+myId);
         elmFood.style.left = "-1000px";
         elmFood.style.top = "-1000px";
+        elmFood.style.width = playingBoard.getBlockWidth() + "px";
+        elmFood.width = playingBoard.getBlockWidth() + "px";
+        elmFood.style.height = playingBoard.getBlockHeight() + "px";
+        elmFood.height = playingBoard.getBlockHeight() + "px";
+
         playingBoard.getBoardContainer().appendChild(elmFood);
         
         // ----- public methods -----
