@@ -154,13 +154,6 @@ SNAKE.Snake = SNAKE.Snake || (function() {
         // ----- private methods -----
         
         function createSnakeElement() {
-            // var tempNode = document.createElement("div");
-            // tempNode.className = "snake-snakebody-block";
-            // tempNode.style.left = "-1000px";
-            // tempNode.style.top = "-1000px";
-            // tempNode.style.width = playingBoard.getBlockWidth() + "px";
-            // tempNode.style.height = playingBoard.getBlockHeight() + "px";
-
             var rand = Math.floor((Math.random() * 7) + 1);
             var tempNode = document.createElement("img");
             tempNode.src = "./img/body" + rand + ".jpg";
@@ -171,8 +164,6 @@ SNAKE.Snake = SNAKE.Snake || (function() {
             tempNode.width = playingBoard.getBlockWidth() + "px";
             tempNode.style.height = playingBoard.getBlockHeight() + "px";
             tempNode.height = playingBoard.getBlockHeight() + "px";
-
-            
             return tempNode;
         }
         

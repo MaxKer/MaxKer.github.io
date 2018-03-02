@@ -27,6 +27,22 @@
         </div>
       </div>
 
+      <div class="col-md-2 col-sm-3 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#modalTodo">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <span class="fa-stack fa-4x">
+                  <img class=" img-fluid" src="img/jeedom.png">
+                </span>
+              </div>
+            </div>
+          </a>
+          <br/>
+          <div class="portfolio-caption">
+            <h4>Todo list</h4>
+          </div>
+        </div>
+
       <div class="portfolio-modal modal fade post" id="modalWarmDom" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -142,13 +158,31 @@
         </div>
       </div>
 
+      <div class="portfolio-modal modal fade post" id="modalTodo" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                  <div class="rl"></div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 mx-auto">
+                    <div class="modal-body">
+                      <!-- Project Details Go Here -->
+                      <h2 class="text-uppercase">Todo List</h2>
+                      <p class="item-intro text-muted">Things to add or update in this site</p>
+                      <div id="todolist"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
     </div>
   </div>
 
 </section>
-
-<h5 class="panel-heading material-panel__heading">Todo list</h5>
-<div class="panel-body material-panel__body">
-  <div id="todolist"></div>
-
-</div>

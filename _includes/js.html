@@ -8,8 +8,8 @@ function afficherMasquer(id)
 {
   if(document.getElementById(id).style.display == "none")
     document.getElementById(id).style.display = "block";
-  else
-    document.getElementById(id).style.display = "none";
+//   else
+//     document.getElementById(id).style.display = "none";
 }
 
 function getSkills(node, classname) 
@@ -42,7 +42,9 @@ function getTodoList(node) {
 
     $.each(childs,(i, e) => {
         // console.log(e.outerText);
+        // var list = document.createElement('li');
         var clone = childs[i].cloneNode(true);
+        // list.appendChild(clone);
         temp.appendChild(clone);
         temp.appendChild(document.createElement('br'));
     });

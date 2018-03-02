@@ -160,7 +160,7 @@
     > li {
       min-height: 170px;
       .timeline-panel {
-        padding: 0 20px 20px 100px;
+        padding: 0 20px 20px 20px;
       }
       .timeline-image {
         width: 170px;
@@ -171,7 +171,7 @@
         }
       }
       &.timeline-inverted > .timeline-panel {
-        padding: 0 100px 20px 20px;
+        padding: 0 20px 20px 20px;
       }
     }
   }
