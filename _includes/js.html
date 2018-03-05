@@ -44,6 +44,8 @@ function getTodoList(node) {
         // console.log(e.outerText);
         // var list = document.createElement('li');
         var clone = childs[i].cloneNode(true);
+        clone.style.display="block";
+        // console.log(clone);
         // list.appendChild(clone);
         temp.appendChild(clone);
         temp.appendChild(document.createElement('br'));
