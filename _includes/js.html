@@ -21,7 +21,7 @@ function getSkills(node, classname)
         var exit = 0;
         if(temp.childNodes.length > 0) {
             $.each(temp.childNodes, (index, e) => {
-                if(e.outerText === childs[i].outerText)
+                if(e.innerText === childs[i].innerText)
                 {
                     exit = 1;
                 }
