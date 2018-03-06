@@ -322,6 +322,14 @@ footer {
   border: 9px solid #cbccce;
 }
 
+.timeline>li .timeline-image{
+  border: 7px solid #0957ffad;
+}
+
+.timeline>li .timeline-image.sub-timeline{
+  border: 5px solid #4882fd55;
+}
+
 todo {
   font-style: italic;
   color: #af0000;
