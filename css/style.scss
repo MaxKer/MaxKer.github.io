@@ -326,3 +326,38 @@ todo {
   font-style: italic;
   color: #af0000;
 }
+
+.btn-circle:hover {
+  outline: 0;
+  color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  border: 2px solid #fff;
+  border-radius: 100% !important;
+  font-size: 40px;
+  color: #fff;
+  background: 0 0;
+  -webkit-transition: background .3s ease-in-out;
+  -moz-transition: background .3s ease-in-out;
+  transition: background .3s ease-in-out;
+}
+
+.btn {
+  font-weight: 400;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 0;
+}
+
+.timeline-inverted>.timeline-image.sub-timeline, .timeline>.timeline-image.sub-timeline {
+  width: 140px; 
+  height: 140px; 
+  margin-left: -70px;
+}
