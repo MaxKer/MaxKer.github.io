@@ -155,20 +155,21 @@ img {
 //
 // .masthead
 //
-/*
+
 .wrapper-masthead {
   margin-bottom: 50px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
+  border-bottom: 1px solid;
 }
 
+header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+/*
 .site-avatar {
   float: left;
   width: 70px;
@@ -364,8 +365,8 @@ todo {
   border-radius: 0;
 }
 
-.timeline-inverted>.timeline-image.sub-timeline, .timeline>.timeline-image.sub-timeline {
-  width: 140px; 
-  height: 140px; 
-  margin-left: -70px;
-}
+// .timeline-inverted>.timeline-image.sub-timeline, .timeline>.timeline-image.sub-timeline {
+//   width: 140px; 
+//   height: 140px; 
+//   margin-left: -70px;
+// }

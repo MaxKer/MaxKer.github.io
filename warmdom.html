@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="img/header.png" rel="shortcut icon" >
+
+    <title>Maxence Kersten – Portfolio</title>
+
+    <!-- Meta data -->
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta name="description" content="Portfolio">
+<meta property="og:description" content="Portfolio" />
+
+<meta name="author" content="Maxence Kersten" />
+
+
+<!-- Google Analytics -->
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-96667689-2', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/',
+		  'title': ''
+		});
+	</script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Maxence Kersten - Portfolio" href="/feed.xml" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Badge linkedIn -->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="/#">Portfolio</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#career">Career</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+
+
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in"></div>
+          <div class="intro-heading text-uppercase">WarmDom Project</div>
+
+          <a href="#project" class="btn btn-circle js-scroll-trigger btn-xl text-uppercase">
+            <i class="fa fa-angle-double-down animated "></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-light" id="project">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 mx-auto">
+
+              <h1 class="item-intro">Réalisation d'une centrale domotique Jeedom</h1>
+      
+                <h2 id="objectif-du-projet">Objectif du projet</h2>
+                
+                <p>L'objectif principale de ce projet est d'optimiser la qualité du chauffage électrique à partir des fils
+                  pilotes.</p>
+                <p>Afin de gérer au mieux le contrôle de mes chauffages électriques, j'ai souhaité mettre en place une box domotique
+                  reliée à plusieurs sondes de températures et permettant d'envoyer des ordres à chaque chauffage électrique
+                  (4 en tout).</p>
+                <h2 id="sch-ma-fonctionnel">Schéma fonctionnel</h2>
+                <p>Faire apparaître box domotique, internet, smartphone, autres équipements, chauffages, ...</p>
+                <h3 id="box-domotique">Box domotique</h3>
+                <p>Pour ma box domotique j'ai choisi de partir sur une RaspberryPi 3 avec Jeedom 3 installé dessus. Pour les connecter
+                  sondes réparties dans l'appartement, j'ai décider d'utiliser des Raspberry pi Zero, qui ne coûtent
+                  qu'une dizaine d'euros et qui proposent le Wi-Fi.</p>
+                <h4 id="initialisation-de-la-rpi3">Initialisation de la RPi3</h4>
+                <p>J'ai suivi ce
+                  <strong>tutoriel</strong>, qui explique comment flasher la dernière version de raspbian (Lite pour ce projet) sur votre
+                  carte SD.</p>
+                <p>Une fois raspbian installé et à jours, j'ai installé Jeedom à partir de ce
+                  <strong>tutoriel</strong>. La version 3 s'installe comme un paquet Debian classique grâce à un script d'installation.</p>
+                <h4 id="s-curit-et-r-seau">Sécurité et réseau</h4>
+                <p>Afin de rendre accessible Jeedom de l'extérieur, j'ai choisi d'activer le HTTPS sur le Apache de la
+                  RPi, et de configurer LetsEncrypt pour récupérer un certificat TLS Server "trusté" par tous les navigateurs.
+                  Cela me permettra par le suite d'accéder à mon interface Jeedom depuis l'extérieur, et donc de piloter
+                  mon chauffage même depuis l'extérieur de chez moi.</p>
+                <p>1) Activer mod_ssl</p>
+                <p>
+                  <code>a2enmod ssl</code>
+                </p>
+                <p>Redémarrer Apache2 </p>
+                <p>
+                  <code>sudo service apache2 restart</code>
+                </p>
+                <p>2) Configurer letsencrypt</p>
+                <p>3) Modifier le mot de passe admin de Jeedom</p>
+                <p>Avant de rendre accessible votre Jeedom sur internet, vous devez absolument changer le mot de passe par défaut
+                  et mettre un mot de passe robuste.</p>
+                <p>4) Configurer le NAT sur votre box Internet</p>
+                <p>Port interne: 443, port externe 443, machine : votre rpi (onglet NAT/PAT) Je conseille avant d'assigner une
+                  IP statique à votre rpi. (onglet DHCP)</p>
+                <h4 id="int-gration-de-slack">Intégration de Slack</h4>
+                <p>Incoming WebHooks</p>
+                <p>- Permet d'envoyer des messages de Jeedom vers une chan Slack</p>
+                <p>Outgoing WebHooks</p>
+                <p>- Permet d'envoyer des commandes à Jeedom depuis Slack</p>
+                <p>
+                  <strong>Attention</strong>
+                  Il faut bien renseigner la "Destination" dans la commande EnvoiMessage (là où on défini le Webhook, le domaine
+                  et l'authentification token) Ca semble fonctionner sans quand on teste directement via le bouton Tester mais
+                  dans un scenario avec ask, il faut bien que la destination soi renseignée</p>
+                <h4 id="int-gration-de-telegram">Intégration de Telegram</h4>
+                <p>
+                  <a href="https://www.maison-et-domotique.com/70896-piloter-jeedom-avec-telegram/">https://www.maison-et-domotique.com/70896-piloter-jeedom-avec-telegram/</a>
+                </p>
+                <h3 id="contr-le-des-fils-pilotes">Contrôle des fils pilotes</h3>
+                <p>
+                  <a href="http://jilks.fr/wordpress/fil-pilote-directement-avec-un-raspberry-et-jeedom">http://jilks.fr/wordpress/fil-pilote-directement-avec-un-raspberry-et-jeedom</a>
+                </p>
+                <h4 id="schema">Schéma</h4>
+                <h4 id="i2c-rpi">I2C RPi</h4>
+                <h4 id="config-jeedom">Config Jeedom</h4>
+                <h3 id="sondes-temp">Sondes de température DS18b20</h3>
+                <h4 id="schema">Schéma</h4>
+                <p>Insérer la partie du schéma 1-wire avec 1 sonde</p>
+                <p>Ajout de la config avec des sondes sur des raspberry pi zero</p>
+                <h4 id="one-wire">One Wire</h4>
+                <p>
+                  <a href="https://jeedom.com/doc_old/documentation/plugins/onewire/fr_FR/onewire">https://jeedom.com/doc_old/documentation/plugins/onewire/fr_FR/onewire</a>
+                </p>
+                <h4 id="config-jeedom">Config Jeedom</h4>
+                <p>Config du plugin 1-wire (avec des sondes en remote sur les rpi zero)</p>
+                <h3 id="detecteur-de-mouvement">Détecteur de mouvement</h3>
+                <h4 id="schema">Schéma</h4>
+                <p>Connectique PIR HC-SR501 5-20V DC</p>
+                <h4 id="config-jeedom">Config Jeedom</h4>
+                <p>Plugin GPIO - Plugin Jeelink pour accès aux détecteurs des rpi zero à partir du jeedom master (rpi 3)</p>
+                <h3 id="teleinfo-edf">Télé info EDF</h3>
+                <p>
+                  <a href="http://www.magdiblog.fr/gpio/teleinfo-edf-suivi-conso-de-votre-compteur-electrique/">http://www.magdiblog.fr/gpio/teleinfo-edf-suivi-conso-de-votre-compteur-electrique/</a>
+                </p>
+                <h4 id="schema">Schéma</h4>
+                <h4 id="config-jeedom">Config Jeedom</h4>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section  class="bg-light" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+           <h2 class="section-heading text-uppercase">Contact</h2>
+           <h3 class="section-subheading text-muted">Feel free to contact me, I don't bite</h3>
+        </div>
+      </div>
+      <div class="text-center">
+        <h6>Cybersecurity consultant @ <a href="https://www.stelau.com" target="_blank">Stelau Conseil</a> - || -  <a href="mailto:maxence@kersten.io?subject=From Github Pages">maxence@kersten.io</a> - || -  Paris</h6>
+        <br/>
+
+        <a href="mailto:maxence@kersten.io"><i class="svg-icon email"></i></a>
+        
+        
+        <a href="https://github.com/MaxKer" target="_blank"><i class="svg-icon github"></i></a>
+        
+        <a href="https://www.linkedin.com/in/MaxKer" target="_blank"><i class="svg-icon linkedin"></i></a>
+
+      </div>
+    </div>
+  </section>
+ 
+  
+    <div class="wrapper-footer">
+  <div class="container">
+    <footer class="footer">
+
+
+    </footer>
+  </div>
+</div>
+
+    <script src="/js/jquery/jquery.min.js"></script>
+<script src='/js/jquery/jquery-ui.min.js'></script>
+<script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/js/agency/agency.js"></script>
+
+  </body>
+</html>

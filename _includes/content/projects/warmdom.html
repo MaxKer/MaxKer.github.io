@@ -13,28 +13,28 @@ permalink: warmdom.html
           <p class="item-intro text-muted">Réalisation d'une centrale domotique basée sur Jeedom</p>
 
           <h2 id="objectif-du-projet">Objectif du projet</h2>
-          <p>L&#39;objectif principale de ce projet est d&#39;optimiser la qualité du chauffage électrique à partir des fils
+          <p>L'objectif principale de ce projet est d'optimiser la qualité du chauffage électrique à partir des fils
             pilotes.</p>
-          <p>Afin de gérer au mieux le contrôle de mes chauffages électriques, j&#39;ai souhaité mettre en place une box domotique
-            reliée à plusieurs sondes de températures et permettant d&#39;envoyer des ordres à chaque chauffage électrique
+          <p>Afin de gérer au mieux le contrôle de mes chauffages électriques, j'ai souhaité mettre en place une box domotique
+            reliée à plusieurs sondes de températures et permettant d'envoyer des ordres à chaque chauffage électrique
             (4 en tout).</p>
           <h2 id="sch-ma-fonctionnel">Schéma fonctionnel</h2>
           <p>Faire apparaître box domotique, internet, smartphone, autres équipements, chauffages, ...</p>
           <h3 id="box-domotique">Box domotique</h3>
-          <p>Pour ma box domotique j&#39;ai choisi de partir sur une RaspberryPi 3 avec Jeedom 3 installé dessus. Pour les connecter
-            sondes réparties dans l&#39;appartement, j&#39;ai décider d&#39;utiliser des Raspberry pi Zero, qui ne coûtent
-            qu&#39;une dizaine d&#39;euros et qui proposent le Wi-Fi.</p>
+          <p>Pour ma box domotique j'ai choisi de partir sur une RaspberryPi 3 avec Jeedom 3 installé dessus. Pour les connecter
+            sondes réparties dans l'appartement, j'ai décider d'utiliser des Raspberry pi Zero, qui ne coûtent
+            qu'une dizaine d'euros et qui proposent le Wi-Fi.</p>
           <h4 id="initialisation-de-la-rpi3">Initialisation de la RPi3</h4>
-          <p>J&#39;ai suivi ce
+          <p>J'ai suivi ce
             <strong>tutoriel</strong>, qui explique comment flasher la dernière version de raspbian (Lite pour ce projet) sur votre
             carte SD.</p>
-          <p>Une fois raspbian installé et à jours, j&#39;ai installé Jeedom à partir de ce
-            <strong>tutoriel</strong>. La version 3 s&#39;installe comme un paquet Debian classique grâce à un script d&#39;installation.</p>
+          <p>Une fois raspbian installé et à jours, j'ai installé Jeedom à partir de ce
+            <strong>tutoriel</strong>. La version 3 s'installe comme un paquet Debian classique grâce à un script d'installation.</p>
           <h4 id="s-curit-et-r-seau">Sécurité et réseau</h4>
-          <p>Afin de rendre accessible Jeedom de l&#39;extérieur, j&#39;ai choisi d&#39;activer le HTTPS sur le Apache de la
-            RPi, et de configurer LetsEncrypt pour récupérer un certificat TLS Server &quot;trusté&quot; par tous les navigateurs.
-            Cela me permettra par le suite d&#39;accéder à mon interface Jeedom depuis l&#39;extérieur, et donc de piloter
-            mon chauffage même depuis l&#39;extérieur de chez moi.</p>
+          <p>Afin de rendre accessible Jeedom de l'extérieur, j'ai choisi d'activer le HTTPS sur le Apache de la
+            RPi, et de configurer LetsEncrypt pour récupérer un certificat TLS Server "trusté" par tous les navigateurs.
+            Cela me permettra par le suite d'accéder à mon interface Jeedom depuis l'extérieur, et donc de piloter
+            mon chauffage même depuis l'extérieur de chez moi.</p>
           <p>1) Activer mod_ssl</p>
           <p>
             <code>a2enmod ssl</code>
@@ -48,17 +48,17 @@ permalink: warmdom.html
           <p>Avant de rendre accessible votre Jeedom sur internet, vous devez absolument changer le mot de passe par défaut
             et mettre un mot de passe robuste.</p>
           <p>4) Configurer le NAT sur votre box Internet</p>
-          <p>Port interne: 443, port externe 443, machine : votre rpi (onglet NAT/PAT) Je conseille avant d&#39;assigner une
+          <p>Port interne: 443, port externe 443, machine : votre rpi (onglet NAT/PAT) Je conseille avant d'assigner une
             IP statique à votre rpi. (onglet DHCP)</p>
           <h4 id="int-gration-de-slack">Intégration de Slack</h4>
           <p>Incoming WebHooks</p>
-          <p>-&gt; Permet d&#39;envoyer des messages de Jeedom vers une chan Slack</p>
+          <p>-&gt; Permet d'envoyer des messages de Jeedom vers une chan Slack</p>
           <p>Outgoing WebHooks</p>
-          <p>-&gt; Permet d&#39;envoyer des commandes à Jeedom depuis Slack</p>
+          <p>-&gt; Permet d'envoyer des commandes à Jeedom depuis Slack</p>
           <p>
             <strong>Attention</strong>
-            Il faut bien renseigner la &quot;Destination&quot; dans la commande EnvoiMessage (là où on défini le Webhook, le domaine
-            et l&#39;authentification token) Ca semble fonctionner sans quand on teste directement via le bouton Tester mais
+            Il faut bien renseigner la "Destination" dans la commande EnvoiMessage (là où on défini le Webhook, le domaine
+            et l'authentification token) Ca semble fonctionner sans quand on teste directement via le bouton Tester mais
             dans un scenario avec ask, il faut bien que la destination soi renseignée</p>
           <h4 id="int-gration-de-telegram">Intégration de Telegram</h4>
           <p>
