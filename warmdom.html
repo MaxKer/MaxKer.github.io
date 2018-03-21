@@ -28,8 +28,8 @@
 
 		ga('create', 'UA-96667689-2', 'auto');
 		ga('send', 'pageview', {
-		  'page': '/',
-		  'title': ''
+		  'page': '/warmdom.html',
+		  'title': 'WarmDom project'
 		});
 	</script>
 
@@ -165,6 +165,12 @@
                 <h4 id="schema">Schéma</h4>
                 <p>Insérer la partie du schéma 1-wire avec 1 sonde</p>
                 <p>Ajout de la config avec des sondes sur des raspberry pi zero</p>
+                <code>sudo nano /boot/config.txt
+                  add :
+                  
+                  dtoverlay=w1-gpio
+                  
+                </code>
                 <h4 id="one-wire">One Wire</h4>
                 <p>
                   <a href="https://jeedom.com/doc_old/documentation/plugins/onewire/fr_FR/onewire">https://jeedom.com/doc_old/documentation/plugins/onewire/fr_FR/onewire</a>
