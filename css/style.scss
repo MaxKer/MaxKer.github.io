@@ -169,127 +169,7 @@ header.masthead .intro-text {
   padding-top: 150px;
   padding-bottom: 50px;
 }
-/*
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
 
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  img {
-    border-radius: 5px;
-  }
-}
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.site-name {
-  margin: 0;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
-}
-
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
-    }
-  }
-}
-
-//
-// .main
-//
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
-
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
-}
-
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
-}
-
-footer {
-  padding: 20px 0;
-  text-align: center;
-}
-*/
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
@@ -365,8 +245,165 @@ todo {
   border-radius: 0;
 }
 
-// .timeline-inverted>.timeline-image.sub-timeline, .timeline>.timeline-image.sub-timeline {
-//   width: 140px; 
-//   height: 140px; 
-//   margin-left: -70px;
-// }
+.material-label {
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 4px 16px;
+  margin:2px;
+  -webkit-transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.material-label_lg {
+  padding: 5px 20px;
+  font-size: 16px;
+}
+.material-label_sm {
+  padding: 3px 12px;
+  font-size: 13px;
+}
+.material-label_xs {
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.material-label {
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  color: #000;
+}
+.material-label:hover {
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+}
+.material-label_primary {
+  border: 1px solid #64b2f5;
+  background-color: #64b2f5;
+  color: #fff;
+}
+.material-label_primary:hover {
+  background-color: #64b2f5;
+  border: 1px solid #64b2f5;
+}
+
+.timeline>.timeline-panel.timeline-inverted {
+  float: right;
+  padding: 0 20px 0 100px;
+  // text-align: left
+  text-align: justify
+}
+
+div.timeline-panel.timeline-inverted {
+  float: right;
+  padding: 0 20px 0 100px;
+  // text-align: left
+  text-align: justify
+}
+
+.timeline>.timeline-panel.timeline-inverted:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0
+}
+
+.timeline>.timeline-panel.timeline-inverted:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0
+}
+
+@media (min-width: 768px) {
+  .timeline:before {
+      left: 50%
+  }
+  .timeline>li {
+      min-height: 100px;
+      margin-bottom: 100px
+  }
+  .timeline>li .timeline-panel {
+      float: left;
+      width: 41%;
+      padding: 0 20px 20px 30px;
+      text-align: right
+  }
+  p {
+    text-align: justify
+  }
+  .timeline>li .timeline-panel>p {
+    text-align: justify
+  }
+  .timeline>li .timeline-image {
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      margin-left: -50px
+  }
+  .timeline>li .timeline-image h4 {
+      font-size: 13px;
+      line-height: 18px;
+      margin-top: 16px
+  }
+  .timeline>li.timeline-inverted .timeline-panel {
+    float: right;
+    padding: 0 30px 20px 20px;
+    // text-align: left
+    text-align: justify
+}
+  div.timeline-panel.timeline-inverted {
+      float: right;
+      padding: 0 30px 20px 20px;
+      // text-align: left
+      text-align: justify
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline>li {
+      min-height: 150px
+  }
+  .timeline>li .timeline-panel {
+      padding: 0 20px 20px
+  }
+  .timeline>li .timeline-image {
+      width: 150px;
+      height: 150px;
+      margin-left: -75px
+  }
+  .timeline>li .timeline-image h4 {
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 30px
+  }
+  div.timeline-panel.timeline-inverted {
+      padding: 0 20px 20px
+  }
+}
+
+@media (min-width: 1200px) {
+  .timeline>li {
+      min-height: 170px
+  }
+  .timeline>li .timeline-panel {
+      padding: 0 20px 20px 20px
+  }
+  .timeline>li .timeline-image {
+      width: 170px;
+      height: 170px;
+      margin-left: -85px
+  }
+  .timeline>li .timeline-image h4 {
+      margin-top: 40px
+  }
+  div.timeline-panel.timeline-inverted {
+      padding: 0 20px 20px 20px
+  }
+}
