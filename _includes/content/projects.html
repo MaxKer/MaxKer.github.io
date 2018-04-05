@@ -23,29 +23,48 @@
         </a>
         <br/>
         <div class="portfolio-caption">
-          <h4>Projet WarmDom <h6 style="color:red">[ En construction ]</h6> </h4>
+          <h4>WarmDom
+            <h6 style="color:red">[ En construction ]</h6> </h4>
         </div>
       </div>
 
       <div class="col-md-2 col-sm-3 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#modalTodo">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <span class="fa-stack fa-4x">
-                  <!-- <img class=" img-fluid" src="img/jeedom.png"> -->
-                    <i class="fa fa-square fa-stack-2x text-info"></i>
-                    <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
-                </span>
-              </div>
+        <a class="portfolio-link" data-toggle="modal" href="#modalTodo">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <span class="fa-stack fa-4x">
+                <!-- <img class=" img-fluid" src="img/jeedom.png"> -->
+                <i class="fa fa-square fa-stack-2x text-info"></i>
+                <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+              </span>
             </div>
-          </a>
-          <br/>
-          <div class="portfolio-caption">
-            <h4>Todo list</h4>
           </div>
+        </a>
+        <br/>
+        <div class="portfolio-caption">
+          <h4>Todo list</h4>
         </div>
+      </div>
 
-      <div class="portfolio-modal modal fade post" id="modalWarmDom" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="col-md-2 col-sm-3 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#modalPFE">
+        <!-- <a href="https://drive.google.com/open?id=0B8Kmjwkwv-SlNzh5c1hJZmtVUTg" target="_blank"> -->
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+              <span class="fa-stack fa-4x">
+                <img class=" img-fluid" src="img/contiki.png">
+              </span>
+            </div>
+          </div>
+        </a>
+        <br/>
+        <div class="portfolio-caption">
+          <h4>Final project 2015</h4>
+          <h6 class="text-muted">Lithe / 6LowPAN / Contiki OS</h6>
+        </div>
+      </div>
+
+      <div class="portfolio-modal modal fade post" id="modalPFE" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -58,99 +77,26 @@
                 <div class="col-lg-12 mx-auto">
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
-                    <h2 class="text-uppercase">Projet WarmDom</h2>
-                    <p class="item-intro text-muted">Réalisation d'une centrale domotique basée sur Jeedom</p>
+                    <h2 class="text-uppercase">Final project ECE</h2>
 
-                    <h2 id="objectif-du-projet">Objectif du projet</h2>
-                    <p>L'objectif principale de ce projet est d'optimiser la qualité du chauffage électrique à partir des fils
-                      pilotes.</p>
-                    <p>Afin de gérer au mieux le contrôle de mes chauffages électriques, j'ai souhaité mettre en place une box
-                      domotique reliée à plusieurs sondes de températures et permettant d'envoyer des ordres à chaque chauffage
-                      électrique (4 en tout).</p>
-                    <h2 id="schema-fonctionnel">Schéma fonctionnel</h2>
-                    <p>
-                      <todo>Faire apparaître box domotique, internet, smartphone, autres équipements, chauffages, ...</todo>
+                    <h6 class="timeline-date">State of art <block class="text-muted"></block>September - December 2014</h6>
+                    <p class="text-muted">
+                      During the first project period, we focused on the state of art regarding the 6LowPAN security, including hardware support
+                      and software. We could then define a target solution, and test it in the Cooja simulation environment
+                      before the PoC implementation.
                     </p>
-                    <h3 id="box-domotique">Box domotique</h3>
-                    <p>Pour ma box domotique j'ai choisi de partir sur une RaspberryPi 3 avec Jeedom 3 installé dessus. Pour
-                      les connecter sondes réparties dans l'appartement, j'ai décider d'utiliser des Raspberry pi Zero, qui
-                      ne coûtent qu'une dizaine d'euros et qui proposent le Wi-Fi.</p>
-                    <h4 id="initialisation-de-la-rpi3">Initialisation de la RPi3</h4>
-                    <p>J'ai suivi ce <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">tutoriel</a>, qui explique comment flasher la dernière version de raspbian (Lite pour ce projet)
-                      sur votre carte SD.</p>
-                    <p>Une fois raspbian installé et à jours, j'ai installé Jeedom à partir de ce
-                      <a href="https://github.com/jeedom/documentation/blob/master/installation/fr_FR/index.md#raspberrypi" target="_blank">tutoriel</a>. La version 3 s'installe comme un paquet Debian classique grâce à un script d'installation.</p>
-                    <h4 id="securit-et-reseau">Sécurité et réseau</h4>
-                    <p>Afin de rendre accessible Jeedom de l'extérieur, j'ai choisi d'activer le HTTPS sur le Apache de la RPi,
-                      et de configurer LetsEncrypt pour récupérer un certificat TLS Server "trusté" par tous les
-                      navigateurs. Cela me permettra par le suite d'accéder à mon interface Jeedom depuis l'extérieur, et
-                      donc de piloter mon chauffage même depuis l'extérieur de chez moi.</p>
-                    <h6>1) Activer mod_ssl</h6>
-                    <p>
-                      <code>a2enmod ssl</code>
-                    </p>
-                    <p>Redémarrer Apache2 </p>
-                    <p>
-                      <code>sudo service apache2 restart</code>
-                    </p>
-                    <h6>2) Configurer letsencrypt</h6>
-                    <todo>Commandes pour installer et configurer letsencrypt</todo>
 
-                    <h6>3) Modifier le mot de passe admin de Jeedom</h6>
-                    <p>Avant de rendre accessible votre Jeedom sur internet, vous devez absolument changer le mot de passe par
-                      défaut et mettre un mot de passe robuste.</p>
+                    <h6 class="timeline-date">Proof of Concept </h6>
+                    <h6 class="timeline-date text-muted">January - February 2015</h6>
 
-                    <h6>4) Configurer le NAT sur votre box Internet</h6>
-                    <p>Port interne: 443, port externe 443, machine : votre rpi (onglet NAT/PAT) Je conseille avant d'assigner
-                      une IP statique à votre rpi. (onglet DHCP)</p>
-                    <h4 id="int-gration-de-slack">Intégration de Slack</h4>
-                    <h6>1) Incoming WebHooks</h6>
-                    <p>-> Permet d'envoyer des messages de Jeedom vers une chan Slack</p>
-                    <h6>2) Outgoing WebHooks</h6>
-                    <p>-> Permet d'envoyer des commandes à Jeedom depuis Slack</p>
-                    <todo>Ajouter les liens vers la configuration des WebHooks Slack</todo>
-                    <p>
-                      <strong>Attention</strong>
-                      Il faut bien renseigner la "Destination" dans la commande EnvoiMessage (là où on défini le Webhook, le domaine
-                      et l'authentification token) Ca semble fonctionner sans quand on teste directement via le bouton Tester
-                      mais dans un scenario avec ask, il faut bien que la destination soi renseignée</p>
-                    <h4 id="int-gration-de-telegram">Intégration de Telegram</h4>
-                    <p>
-                      <a href="https://www.maison-et-domotique.com/70896-piloter-jeedom-avec-telegram/">Jeedom et Telegram</a>
+                    <p class="text-muted">
+
+                      We have developed and implemented a driver for the AES module of the Zigduino_r2 platform running ContikiOS. In order to
+                      ensure the confidentiality of the exchanges between all the nodes, we implemented the protocol Lithe
+                      (CoAP) on several platforms, which is a protocol of exchange of secrecy.
+                      <a href="https://drive.google.com/open?id=0B8Kmjwkwv-SlNzh5c1hJZmtVUTg">Please find our presentation</a>.
                     </p>
-                    <h3 id="contr-le-des-fils-pilotes">Contrôle des fils pilotes</h3>
-                    <p> 
-                      <a href="http://jilks.fr/wordpress/fil-pilote-directement-avec-un-raspberry-et-jeedom">Jeedom et fils pilotes</a>
-                    </p>
-                    <h4 id="sch-ma"><todo>Schéma</todo></h4>
-
-                    <h4 id="i2c-rpi"><todo>I2C RPi</todo></h4>
-
-                    <h4 id="config-jeedom">Config Jeedom</h4>
-
-                    <h3 id="sondes-de-temp-rature-ds18b20">Sondes de température DS18b20</h3>
-                    <h4 id="sch-ma">Schéma</h4>
-
-                    <p><todo>Insérer la partie du schéma 1-wire avec 1 sonde</todo></p>
-                    <p><todo>-> Ajout de la config avec des sondes sur des raspberry pi zero</todo></p>
-                    <h4 id="one-wire">One Wire</h4>
-                    <p>
-                      <a href="https://jeedom.com/doc_old/documentation/plugins/onewire/fr_FR/onewire">https://jeedom.com/doc_old/documentation/plugins/onewire/fr_FR/onewire</a>
-                    </p>
-                    <h4 id="config-jeedom">Config Jeedom</h4>
-                    <p><todo>Config du plugin 1-wire (avec des sondes en remote sur les rpi zero)</todo></p>
-                    <h3 id="d-tecteur-de-mouvement"><todo>Détecteur de mouvement</todo></h3>
-                    <h4 id="sch-ma"><todo>Schéma</todo></h4>
-                    <p>-> Connectique PIR HC-SR501 5-20V DC</p>
-                    <h4 id="config-jeedom">Config Jeedom</h4>
-                    <p>-> Plugin GPIO -> Plugin Jeelink pour accès aux détecteurs des rpi zero à partir du jeedom master
-                      (rpi 3)</p>
-                    <h3 id="t-l-info-edf">Télé info EDF</h3>
-                    <p>
-                      <a href="http://www.magdiblog.fr/gpio/teleinfo-edf-suivi-conso-de-votre-compteur-electrique/">http://www.magdiblog.fr/gpio/teleinfo-edf-suivi-conso-de-votre-compteur-electrique/</a>
-                    </p>
-                    <h4 id="sch-ma">Schéma</h4>
-                    <h4 id="config-jeedom">Config Jeedom</h4>
+                    <img src="img/coap.png" style="max-width:100%"/>
                   </div>
                 </div>
               </div>
@@ -160,30 +106,31 @@
         </div>
       </div>
 
+
       <div class="portfolio-modal modal fade post" id="modalTodo" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                  <div class="rl"></div>
-                </div>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+              <div class="lr">
+                <div class="rl"></div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-12 mx-auto">
-                    <div class="modal-body">
-                      <!-- Project Details Go Here -->
-                      <h2 class="text-uppercase">Todo List</h2>
-                      <p class="item-intro text-muted">Things to add or update in this site</p>
-                      <div id="todolist"></div>
-                    </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 mx-auto">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <h2 class="text-uppercase">Todo List</h2>
+                    <p class="item-intro text-muted">Things to add or update in this site</p>
+                    <div id="todolist"></div>
                   </div>
                 </div>
               </div>
             </div>
-  
           </div>
+
         </div>
+      </div>
     </div>
   </div>
 
