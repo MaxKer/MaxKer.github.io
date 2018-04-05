@@ -10,8 +10,7 @@
     <div class="row">
 
       <!-- Liste des projets -->
-
-      <div class="col-md-2 col-sm-3 portfolio-item">
+      <div class="col-md-4 col-sm-12 portfolio-item">
         <a href="./warmdom.html">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
@@ -28,39 +27,33 @@
         </div>
       </div>
 
-      <div class="col-md-2 col-sm-3 portfolio-item">
-        <a class="portfolio-link" data-toggle="modal" href="#modalTodo">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <span class="fa-stack fa-4x">
-                <!-- <img class=" img-fluid" src="img/jeedom.png"> -->
-                <i class="fa fa-square fa-stack-2x text-info"></i>
-                <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
-              </span>
-            </div>
-          </div>
-        </a>
-        <br/>
-        <div class="portfolio-caption">
-          <h4>Todo list</h4>
+      <div class="col-md-4 col-sm-12 portfolio-item">
+        <div class="timeline-heading">
+          <h4 class="subheading">ECE Paris - final project</h4>
+          <h6 class="timeline-date text-muted">September 2014 - February 2015</h6>
         </div>
-      </div>
 
-      <div class="col-md-2 col-sm-3 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#modalPFE">
-        <!-- <a href="https://drive.google.com/open?id=0B8Kmjwkwv-SlNzh5c1hJZmtVUTg" target="_blank"> -->
+        <a class="portfolio-link" data-toggle="modal" href="#modalPFE">
+          <!-- <a href="https://drive.google.com/open?id=0B8Kmjwkwv-SlNzh5c1hJZmtVUTg" target="_blank"> -->
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <span class="fa-stack fa-4x">
-                <img class=" img-fluid" src="img/contiki.png">
-              </span>
+              <img class=" img-fluid" src="img/contiki-2.png">
             </div>
           </div>
         </a>
         <br/>
         <div class="portfolio-caption">
-          <h4>Final project 2015</h4>
-          <h6 class="text-muted">Lithe / 6LowPAN / Contiki OS</h6>
+
+          <p class="text-muted">
+            I did my final project study in collaboration with Thales Communication & Security with Mr. Clément DUHART and Mr. Jean-Marc
+            LACROIX. We were a team of 5 engineer from ECE Paris including four students from "network & telecoms" and one
+            from "Information Systems" specialization. The problem of our project was: "How to secure communications (802.15.4
+            - 6LowPAN) within a sensor network (ContikiOS)".
+            <a class="portfolio-link" data-toggle="modal" href="#modalPFE">See more.</a>
+          </p>
+          <code class="other-skill material-label_primary">6LowPAN</code>
+          <code class="other-skill material-label_primary">ContikiOS</code>
+          <code class="cyber-tech-skill material-label_primary">AES</code>
         </div>
       </div>
 
@@ -76,9 +69,7 @@
               <div class="row">
                 <div class="col-lg-12 mx-auto">
                   <div class="modal-body">
-                    <!-- Project Details Go Here -->
                     <h2 class="text-uppercase">Final project ECE</h2>
-
                     <h5 class="timeline-date">State of art</h5>
                     <h6 class="timeline-date text-muted">September - December 2014</h6>
                     <p class="text-muted">
@@ -86,53 +77,22 @@
                       and software. We could then define a target solution, and test it in the Cooja simulation environment
                       before the PoC implementation.
                     </p>
-
                     <h5 class="timeline-date">Proof of Concept </h5>
                     <h6 class="timeline-date text-muted">January - February 2015</h6>
-
                     <p class="text-muted">
-
                       We have developed and implemented a driver for the AES module of the Zigduino_r2 platform running ContikiOS. In order to
                       ensure the confidentiality of the exchanges between all the nodes, we implemented the protocol Lithe
                       (CoAP) on several platforms, which is a protocol of exchange of secrecy.
                       <a href="https://drive.google.com/open?id=0B8Kmjwkwv-SlNzh5c1hJZmtVUTg">Please find our presentation</a>.
                     </p>
-                    <img src="img/coap.png" style="max-width:100%"/>
+                    <img src="img/coap.png" style="max-width:100%" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-        </div>
-      </div>
-
-
-      <div class="portfolio-modal modal fade post" id="modalTodo" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-              <div class="lr">
-                <div class="rl"></div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12 mx-auto">
-                  <div class="modal-body">
-                    <!-- Project Details Go Here -->
-                    <h2 class="text-uppercase">Todo List</h2>
-                    <p class="item-intro text-muted">Things to add or update in this site</p>
-                    <div id="todolist"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
   </div>
-
 </section>
