@@ -44,6 +44,18 @@ permalink: warmdom.html
             <code>sudo service apache2 restart</code>
           </p>
           <p>2) Configurer letsencrypt</p>
+          For jessie add this line :
+          deb http://ftp.debian.org/debian jessie-backports main
+          to your sources.list (or add a new file with the ".list" extension to /etc/apt/sources.list.d/) You can also find a list of other mirrors at https://www.debian.org/mirror/list
+          For stretch add this line :
+          deb http://ftp.debian.org/debian stretch-backports main
+          to your sources.list (or add a new file with the ".list" extension to /etc/apt/sources.list.d/) You can also find a list of other mirrors at https://www.debian.org/mirror/list
+        <code>
+          sudo apt-get update
+          sudo apt-get install python-certbot-apache -t stretch-backports
+          /opt/letsencrypt/letsencrypt-auto --apache --email <email> -d <maxence.kersten.io>
+        </code>
+
           <p>3) Modifier le mot de passe admin de Jeedom</p>
           <p>Avant de rendre accessible votre Jeedom sur internet, vous devez absolument changer le mot de passe par défaut
             et mettre un mot de passe robuste.</p>

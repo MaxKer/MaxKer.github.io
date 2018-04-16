@@ -134,9 +134,20 @@
                   <code>sudo service apache2 restart</code>
                 </p>
                 <p>2) Configurer letsencrypt</p>
+                For jessie add this line :
+                deb http://ftp.debian.org/debian jessie-backports main
+                to your sources.list (or add a new file with the ".list" extension to /etc/apt/sources.list.d/) You can also find a list of other mirrors at https://www.debian.org/mirror/list
+                For stretch add this line :
+                deb http://ftp.debian.org/debian stretch-backports main
+                to your sources.list (or add a new file with the ".list" extension to /etc/apt/sources.list.d/) You can also find a list of other mirrors at https://www.debian.org/mirror/list
+              <code>
+                sudo apt-get update
+                sudo apt-get install python-certbot-apache -t stretch-backports
+                /opt/letsencrypt/letsencrypt-auto --apache --email <email> -d <maxence.kersten.io>
+              </code>
                 <p>3) Modifier le mot de passe admin de Jeedom</p>
                 <p>Avant de rendre accessible votre Jeedom sur internet, vous devez absolument changer le mot de passe par défaut
-                  et mettre un mot de passe robuste.</p>
+                  et mettre un mot de passe robuste. Pensez également à activer l'authentification à deux facteurs. (2FA)</p>
                 <p>4) Configurer le NAT sur votre box Internet</p>
                 <p>Port interne: 443, port externe 443, machine : votre rpi (onglet NAT/PAT) Je conseille avant d'assigner une
                   IP statique à votre rpi. (onglet DHCP)</p>
