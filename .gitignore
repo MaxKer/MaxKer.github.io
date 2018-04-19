@@ -12,3 +12,5 @@ package.json
 \.idea/
 
 img/Thumbs\.db
+
+img/doNot/
