@@ -166,7 +166,7 @@ img {
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -413,4 +413,8 @@ section {
   div.timeline-panel.timeline-inverted {
       padding: 0px 20px 20px 20px
   }
+}
+
+.intro-heading {
+  color: rgb(255, 255, 255);
 }
