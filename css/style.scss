@@ -200,15 +200,20 @@ header.masthead .intro-text {
 }
 
 .timeline>li .clickable:hover {
-  border: 9px solid #cbccce;
+  // border: 9px solid #cbccce;
 }
 
 .timeline>li .timeline-image{
-  border: 7px solid #0957ffad;
+  background-color: transparent;
+  border: none;
 }
 
 .timeline>li .timeline-image.sub-timeline{
   border: 5px solid #4882fd55;
+}
+
+.img-fluid {
+  max-height: 100%;
 }
 
 todo {

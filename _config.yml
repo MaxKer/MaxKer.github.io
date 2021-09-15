@@ -3,7 +3,8 @@
 #
 
 # Name of your site (displayed in the header)
-name: Maxence Kersten
+#name: Maxence Kersten
+title: Maxence Kersten
 
 # Short bio or description (displayed in the header)
 description: 
@@ -17,8 +18,9 @@ avatar: https://avatars0.githubusercontent.com/u/7915438?s=400&u=43f1b78d6a7de44
 
 # Includes an icon in the footer for each username you enter
 footer-links:
+  website: https://kertech.io
   dribbble:
-  email: maxence@kersten.io?Subject=From maxker.github.io
+  email: maxence@kertech.io?Subject=From maxker.github.io
   facebook:
   flickr:
   github: MaxKer
